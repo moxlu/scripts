@@ -23,6 +23,7 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 
 sudo apt update
 sudo apt install -y ./discord.deb golang-go signal-desktop spotify-client sublime-text
+sudo rm discord.deb signal-desktop-keyring.gpg
 
 echo "----------"
 echo "Please manually install Citrix Workspace and HDX RealTime Media Engine."
