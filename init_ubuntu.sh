@@ -1,5 +1,11 @@
 #!/bin/bash
 
+sudo apt install -y curl libfuse2
+
+# Discord
+wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+sudo apt install -y ./discord.deb
+
 # Joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
 
@@ -17,8 +23,9 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | 
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
 sudo apt update
-sudo apt install discord signal-desktop spotify-client steam sublime-text
+sudo apt install -y signal-desktop spotify-client steam sublime-text
 
+echo "----------"
 echo "Please manually install Citrix Workspace and HDX RealTime Media Engine."
 echo "https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html"
 echo "https://www.citrix.com/downloads/citrix-receiver/additional-client-software/hdx-realtime-media-engine-latest.html"
